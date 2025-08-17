@@ -1,0 +1,91 @@
+:root{
+  --bg: #0f1115;
+  --panel: #151923;
+  --card: #1a1f2b;
+  --stroke: rgba(255,255,255,0.07);
+  --ink: #e8eefc;
+  --muted: #93a0b8;
+  --accent: #3b82f6;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color:var(--ink); background: var(--bg);
+}
+
+/* Header */
+.site-header{
+  position:sticky; top:0; z-index:10;
+  display:flex; justify-content:space-between; align-items:center;
+  padding: 16px clamp(16px,5vw,48px);
+  background: rgba(10,12,18,.7);
+  backdrop-filter: blur(6px);
+}
+.brand{ font-weight:800 }
+.brand span{ opacity:.6; margin-left:.35rem; font-weight:600 }
+.nav{ display:flex; gap:1rem; align-items:center }
+.nav a{ color:var(--ink); text-decoration:none; opacity:.85 }
+.btn.small{ padding:.45rem .8rem; font-size:.9rem }
+
+/* Botones */
+.btn{
+  display:inline-block; text-decoration:none; color:white; background:var(--accent);
+  padding:.9rem 1.4rem; border-radius:999px; font-weight:700;
+}
+.btn.ghost{ background: transparent; color: var(--ink); border:1px solid var(--stroke) }
+
+/* Hero */
+.hero{ text-align:center; padding: clamp(48px,10vw,120px) 1rem }
+.hero h1{ margin:0 0 .5em; font-size: clamp(2.4rem, 7vw, 4rem); }
+.hero p{ margin: 0 0 1.5em; color:var(--muted) }
+.ctas{ display:flex; justify-content:center; gap:1rem; flex-wrap:wrap }
+
+/* Brands */
+.brands{ padding: clamp(28px, 6vw, 80px) }
+.brands h2{ margin:0 0 1rem }
+.grid{ display:grid; gap:.9rem; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)) }
+.brand-card{ padding:1rem; background:var(--card); border:1px solid var(--stroke); border-radius:14px; cursor:pointer }
+.brand-card:hover{ border-color: var(--accent) }
+
+/* How */
+.how{ padding: clamp(28px, 6vw, 80px) }
+.steps{ display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)) }
+.step{ background:var(--panel); border:1px solid var(--stroke); border-radius:14px; padding:1.2rem; text-align:center }
+.step .ico{ font-size:1.6rem; margin-bottom:.5rem }
+.step p{ color:var(--muted) }
+
+/* Quote */
+.quote{ padding: clamp(28px, 6vw, 80px) }
+.quote h2{ margin:0 0 1rem }
+.quote-form{ display:grid; gap:1rem; background: var(--panel); border-radius:14px; padding:1rem; border:1px solid var(--stroke) }
+.quote-form .row{ display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)) }
+label{ display:grid; gap:.4rem; font-weight:600 }
+input,select{ width:100%; padding:.8rem; border-radius:12px; border:1px solid var(--stroke); background:#0f1420; color:var(--ink) }
+.hint{ color:var(--muted) }
+.estimate{ margin-top:1rem; background: var(--card); border-radius:14px; padding:1rem; border:1px solid var(--stroke) }
+.hidden{ display:none }
+.price{ font-size:1.6rem; font-weight:800 }
+
+/* Testimonials */
+.testimonials{ padding: clamp(28px, 6vw, 80px) }
+.testimonials h2{ margin:0 0 1rem }
+.t-grid{ display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)) }
+.t-card{ background:var(--panel); border-radius:14px; padding:1rem; color:var(--muted); border:1px solid var(--stroke) }
+
+/* Footer */
+footer{ text-align:center; padding:2rem; background:#0d1017; border-top:1px solid var(--stroke) }
+footer .muted{ color:var(--muted) }
+footer .legal{ color:var(--muted); font-size:.9rem }
+
+/* WhatsApp botón */
+.whatsapp{
+  position: fixed; right:18px; bottom:18px;
+  width:56px; height:56px;
+  display:grid; place-items:center;
+  background:#25D366; color:#fff;
+  border-radius:50%;
+  box-shadow:0 10px 30px rgba(37,211,102,.45);
+  text-decoration:none;
+}
+.whatsapp svg{ width:60%; height:60% }
